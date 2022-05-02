@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Course List</title>
+</head>
+<body>
+
+
+    <h1>Course List</h1>
+        <table>
+            <tr th:each="course ${courses}">
+                <td th:text="${course.id}"/>
+                <td th:text="${course.title}"/>
+                <td th:text="${course.description}"/>
+                <td th:text="${course.fee }"/>
+            </tr>
+        </table>
+</body>
+</html>
