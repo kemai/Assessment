@@ -19,7 +19,7 @@ public class BookModelAssembler implements RepresentationModelAssembler<Book,Ent
             throw new BookNotFoundException();
         }
         return EntityModel.of(book,
-               linkTo(methodOn(BookController.class).getBookJson(Long.valueOf(book.getIsbn()))).withSelfRel(),
+               linkTo(methodOn(BookController.class).getBookJson(book.getIsbn())).withSelfRel(),
                linkTo(methodOn(BookController.class).getBooksJson()).withRel("books"));
     }
 }

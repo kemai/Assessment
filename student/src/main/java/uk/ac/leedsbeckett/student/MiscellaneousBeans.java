@@ -130,9 +130,9 @@ public class MiscellaneousBeans {
             studentRepository.saveAllAndFlush(Set.of(abba,marco,pedro));
 
             // test data for new account in the finance service
-            enrolmentService.createNewAccount(marco);
-            enrolmentService.createNewAccount(pedro);
-            enrolmentService.createNewAccount(abba);
+          //  enrolmentService.createNewAccount(marco);
+          //  enrolmentService.createNewAccount(pedro);
+          //  enrolmentService.createNewAccount(abba);
 
             //test data for new account in library service
 
@@ -151,12 +151,6 @@ public class MiscellaneousBeans {
 
             enrolmentService.enrolInCourseIntegration(abba,ai);
             enrolmentService.enrolInCourseIntegration(abba,am);
-
-
-
-
-
-
 
 
         };

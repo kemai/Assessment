@@ -38,8 +38,8 @@ public class BookController {
 
     @GetMapping("api/books/{id}")
     @ResponseBody
-    public EntityModel<Book> getBookJson(@PathVariable Long id){
-        return bookService.getBookByIdJson(id);
+    public EntityModel<Book> getBookJson(@PathVariable String isbn){
+        return bookService.getBookByIdJson(isbn);
     }
 
     @PostMapping("api/books")

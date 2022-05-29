@@ -7,6 +7,7 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.Set;
 
 @Entity
 @Data
@@ -23,8 +24,10 @@ public class Book {
     private Integer n_copies;
 
 
+    @ManyToMany(mappedBy = "booksList")
+    @JsonIgnore
+    Set<Account> accountsBookList;
     @ManyToOne
-    @JoinColumn(name="account_lb",referencedColumnName="id")
     @ToString.Exclude
     private Transaction transaction;
 
