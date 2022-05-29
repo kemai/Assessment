@@ -1,0 +1,18 @@
+version: '3'
+services:
+  server:
+    container_name: studentdb
+    image: h2-image:latest
+    environment:
+      SPRING_APPLICATION_JSON: >
+        {
+          "db": {
+            "h2": true,
+            "mysql": false,
+            "schema": true,
+            "seed": true,
+            "populate": true
+          }
+        }
+    ports:
+      - 8090:8090

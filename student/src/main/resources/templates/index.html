@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="en" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <title>Student Portal</title>
+    <meta th:replace="fragments/header">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div th:replace="fragments/navbar"></div>
+    <div class="row text-center">
+    <h2 th:inLine="text">Student Profile</h2>
+
+    </div>
+
+    <!--Header section  -->
+
+    <!--About Section-->
+    <section class="for-full-back color-light " id="about">
+        <div class="container">
+
+            <div class="row text-center">
+                <div class="col-md-8 col-md-offset-2">
+                    <h2>Student profile</h2>
+                </div>
+
+            </div>
+            <div class="row text-center">
+                <div class="col-md-12" sec:authorize="isAuthenticated()">
+
+                 <p th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</p>
+                    <form th:action="@{/logout}" method="post">
+                        <input type="submit" value="Sign Out"/>
+                    </form>
+                </div>
+
+            </div>
+            <div class="row text-center space-pad">
+                <div class="col-md-3 ">
+
+                    <div class="about-div">
+
+                        <i class="fa fa-user fa-4x color-blue"></i>
+
+
+                        <h3 th:ref="login">Login </h3>
+                       
+
+                    </div>
+
+                </div>
+                <div class="col-md-3 ">
+
+                    <div class="about-div">
+
+                        <i class="fa fa-list fa-4x color-blue"></i>
+
+
+                        <h3 th:ref="">List of Courses </h3>
+                        
+
+                    </div>
+
+                </div>
+                <div class="col-md-3 ">
+
+                    <div class="about-div">
+
+                        <i class="fa fa-table fa-4x color-blue"></i>
+
+
+                        <h3 th:ref="">Graduation</h3>
+                        
+
+                    </div>
+
+                </div>
+                <div class="col-md-3 ">
+
+                    <div class="about-div">
+
+                        <i class="fa fa-folder fa-4x color-blue"></i>
+
+
+                        <h3>Prova 4 </h3>
+                      
+
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+
+
+    </section>  
+   
+    <!--End About Section-->
+
+
+
+    <!--End Contact Section -->
+    <!--footer Section -->
+    <div class="for-full-back " id="footer">
+
+         
+    </div>
+    <!--End footer Section -->
+    <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+    <!-- CORE JQUERY  -->
+    <script src="../static/plugins/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP CORE SCRIPT   -->
+    <script src="../static/plugins/bootstrap.js"></script>
+    <!-- CUSTOM SCRIPTS -->
+    <script src="../static/js/custom.js"></script>
+
+</body>
+</html>

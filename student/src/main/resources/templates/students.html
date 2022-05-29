@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
+<head>
+    <title>Studente Details</title>
+    <meta th:replace="fragments/header">
+</head>
+<body>
+
+
+        <h2 th:inLine="text">Student Profile</h2>
+        <p th:inLine="text"> First Name: [[${student.Firstname}]]</p>
+        <p th:inLine="text"> Surname : [[${student.Surname}]]</p>
+        <p th:inLine="text"> Student ID : [[${student.externalStudentId}]]</p>
+
+</body>
+</html>

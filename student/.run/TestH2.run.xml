@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="TestH2" type="docker-deploy" factoryName="docker-image" server-name="Docker">
+    <deployment type="docker-image">
+      <settings>
+        <option name="imageTag" value="oscarfonts/h2:latest" />
+        <option name="containerName" value="testh2" />
+      </settings>
+    </deployment>
+    <method v="2" />
+  </configuration>
+</component>
