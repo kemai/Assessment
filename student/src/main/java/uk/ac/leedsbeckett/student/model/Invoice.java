@@ -15,7 +15,7 @@ public class Invoice {
 
     public enum Type{
         LIBRARY_FINE,
-        TUITION_FEE
+        TUITION_FEES
     }
 
     enum Status{

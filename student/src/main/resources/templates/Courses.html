@@ -1,20 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title> Course List</title>
+    <title>Courses List</title>
+    <meta th:replace="fragments/header">
 </head>
 <body>
 
 
     <h1>Course List</h1>
-        <table>
-            <tr th:each="course ${courses}">
-                <td th:text="${course.id}"/>
-                <td th:text="${course.title}"/>
-                <td th:text="${course.description}"/>
-                <td th:text="${course.fee }"/>
-            </tr>
-        </table>
+    <table>
+        <tr th:each="course : ${courses}">
+            <td th:text="${course.id}"/>
+            <td th:text="${course.title}"/>
+            <td th:text="${course.fee}"/>
+        </tr>
+    </table>
+
+
 </body>
 </html>

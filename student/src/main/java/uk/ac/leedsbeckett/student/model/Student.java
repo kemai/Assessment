@@ -16,8 +16,11 @@ public class Student{
     private Long id;
     @Column(unique = true)
     private String externalStudentId;
+    @Column(nullable = false)
     private String Surname;
-    private String FirstName;
+    @Column(nullable = false)
+    private String Firstname;
+    private String password;
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
             name = "course_student",

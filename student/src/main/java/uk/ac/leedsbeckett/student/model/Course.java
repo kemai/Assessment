@@ -19,6 +19,6 @@ public class Course {
     private String description;
     private Double fee;
     @ManyToMany(mappedBy = "coursesEnrolledIn")
-   // @JsonIgnore
+    @JsonIgnore
     Set<Student> studentsEnrolledInCourse;
 }
